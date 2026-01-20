@@ -16,7 +16,6 @@ namespace FileService
                 Directory.CreateDirectory(DirectoryPath);
         }
 
-        
         public Task<List<string>> GetAllFileNamesAsync()
         {
             var files = Directory.GetFiles(DirectoryPath, "*.txt")
@@ -27,7 +26,6 @@ namespace FileService
             return Task.FromResult(files);
         }
 
-  
         public async Task<string> ReadFileAsync(string fileName)
         {
             string filePath = Path.Combine(DirectoryPath, fileName);
@@ -37,8 +35,6 @@ namespace FileService
 
             return await File.ReadAllTextAsync(filePath);
         }
-
-        // 4) File bor bo'lsa yozmaymiz, false qaytaramiz
         public async Task<bool> WriteFileAsync(string fileName, string text)
         {
             string filePath = Path.Combine(DirectoryPath, fileName);
