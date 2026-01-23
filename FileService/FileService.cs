@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using FileService;
 
-namespace FileServiceApp
+namespace FileService
 {
     internal class FileService : IFileService
     {
