@@ -11,8 +11,8 @@ namespace FileService
     {
        
         Task<List<string>> GetAllFileNamesAsync();
-        Task<bool> WriteFileAsync(string fileName, string text);
-        Task<string> ReadFileAsync(string fileName);
+        Task  AppendLineAsync(string fileName, string line);
+        Task<string?> ReadFileAsync(string fileName);
         
 
     }
