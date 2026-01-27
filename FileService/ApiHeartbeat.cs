@@ -1,10 +1,4 @@
-﻿using System;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-using FileService;
-
-namespace FileService
+﻿namespace FileService
 {
     internal class ApiHeartbeat
     {
@@ -44,7 +38,7 @@ namespace FileService
                     await _files.AppendLineAsync(dailyFile, logLine);
                 }
 
-                await Task.Delay(5000, token);
+                await Task.Delay(100, token);
             }
         }
     }
